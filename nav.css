@@ -1,7 +1,7 @@
 /* Style the header with a grey background and some padding */
 body{
     margin: 0;
-    font-family: roboto;
+    font-family: sans-serif;
 }
 .header {
   overflow: hidden;
@@ -17,8 +17,8 @@ body{
   padding: 12px;
   margin-right: 10px;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 25px;
   border-radius: 4px;
 }
@@ -27,8 +27,8 @@ body{
  
 /*reduire la taille de l'image et positionner en full left*/
 .header a.logo{
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 500;
     height: 100%;
     padding: 0;
     display: flex;
@@ -50,7 +50,7 @@ body{
 }
 
 .header .titre{
-    font-size: 30px;
+    font-size: 23px;
     color: blue;
 }
 
