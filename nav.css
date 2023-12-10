@@ -48,12 +48,16 @@ body{
     display: flex;
     flex-direction: column;
     padding-left: 10px;
-    border-left: 8px solid blue;
+    border-left: 8px solid dodgerblue;
 }
 
 .header .titre{
     font-size: 23px;
-    color: blue;
+    color: dodgerblue;
+}
+
+.header .header-right a{
+  text-transform: uppercase;
 }
 
 /* Change the background color on mouse-over */
