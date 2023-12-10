@@ -6,9 +6,9 @@ body{
 .header {
   overflow: hidden;
   background-color: #f1f1f1;
-  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.34);
--webkit-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.34);
--moz-box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.34);
+  box-shadow: 1px 1px 5px 0px rgba(40,47,209,0.45);
+-webkit-box-shadow: 1px 1px 5px 0px rgba(40,47,209,0.45);
+-moz-box-shadow: 1px 1px 5px 0px rgba(40,47,209,0.66);
 }
 
 /* Style the header links */
@@ -85,7 +85,7 @@ body{
 }
 
 /* Ajout du media queries pour rendre le menu responsive - lorsque l'écran est de 500px de large ou moins, empilez les liens les uns sur les autres */
-@media screen and (max-width: 500px) {
+@media all and (max-width: 500px) {
   .header a {
     float: none;
     display: block;
