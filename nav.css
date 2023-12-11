@@ -1,16 +1,17 @@
 /* Style the header with a grey background and some padding */
 :root{
   --bs-dodgerblue:dodgerblue;
-  --bs-white:white;
+  --bs-white:rgba(255, 255, 255, 0.863);
   --bs-black:black;
   --bs-box-shadow: rgba(40,47,209,0.45);
-  --bs-border-color:rgba(0, 0, 0, 0.1);
+  --bs-border-color:rgba(0, 0, 0, 0.2);
   --bs-success-rgb: 25, 135, 84;
   --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body{
     margin: 0;
+    padding: 0;
     font-family: var(--bs-font-sans-serif);
 }
 .nav {
@@ -25,7 +26,7 @@ body{
 }
 
 /* Style the header links */
-.nav a {
+.nav a{
   float: left;
   color: var(--bs-black);
   text-align: center;
@@ -80,7 +81,7 @@ body{
 }
 
 /* Change the background color on mouse-over */
-.nav .nav-right a:hover {
+.nav .nav-right a:hover{
   background-color: var(--bs-border-color);
   color: var(--bs-black);
 }
@@ -167,6 +168,123 @@ body{
   background-color: var(--bs-white);
   border-radius: 15px;
   border: none;
+}
+.header .btn-1{
+  margin: 30px 0;
+}
+
+.header .btn-1 a{
+  color: var(--bs-dodgerblue);
+  background-color: var(--bs-white);
+  text-align: center;
+  padding: 12px;
+  margin-right: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 550;
+  border-radius: 4px;
+  transition: all 0.5s ease-out;
+}
+.header .btn-1 a:hover{
+  color: var(--bs-white);
+  background-color: var(--bs-border-color);
+}
+
+.header .reseau-sociaux{
+  position: fixed;
+  top: 35%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+}
+
+.header .reseau-sociaux a{
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 550;
+  text-decoration: none;
+  color: var(--bs-white);
+  padding: 20px;
+}
+
+.header .reseau-sociaux a:hover{
+  background-color: var(--bs-border-color);
+}
+/* les background des réseaux sociaux */
+
+.facebook{
+  background-color: blue;
+  border-radius: 10px 0 0 0;
+}
+.instagram{
+  background-color: rgb(179, 3, 3);
+}
+.linkedln{
+  background-color: rgba(3, 65, 146, 0.952);
+}
+.x-twitter{
+  background-color:#2c3e50;
+}
+.github{
+  background-color: var(--bs-black);
+}
+.comup{
+  background-color: rgb(199, 199, 5);
+  border-radius: 0 0 0 10px;
+}
+
+/* le footer */
+
+.footer{
+  width: 100%;
+  background-color: var(--bs-border-color);
+  padding:50px 0 0 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer .foot{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.footer .foot h2{
+  color: var(--bs-dodgerblue);
+  text-transform: uppercase;
+}
+
+.footer .foot p{
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--bs-black);
+  margin-top: 40px;
+}
+
+.footer .reseau .res{
+  margin-top: 50px;
+}
+
+.footer .localisation, .footer .reseau, .footer .apropos{
+  width: 30%;
+}
+.footer .reseau a{
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--bs-white);
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.footer p.copy{
+  background-color: var(--bs-dodgerblue);
+  margin: 0;
+  padding: 30px;
 }
 
 /* Ajout du media queries pour rendre le menu responsive - lorsque l'écran est de 500px de large ou moins, empilez les liens les uns sur les autres */
