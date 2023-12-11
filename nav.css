@@ -1,23 +1,33 @@
 /* Style the header with a grey background and some padding */
+:root{
+  --bs-dodgerblue:dodgerblue;
+  --bs-white:white;
+  --bs-black:black;
+  --bs-box-shadow: rgba(40,47,209,0.45);
+  --bs-border-color:rgba(0, 0, 0, 0.1);
+  --bs-success-rgb: 25, 135, 84;
+  --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 body{
     margin: 0;
-    font-family: sans-serif;
+    font-family: var(--bs-font-sans-serif);
 }
-.header {
+.nav {
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #f1f1f1;
-  box-shadow: 1px 1px 5px 0px rgba(40,47,209,0.45);
+  background-color: var(--bs-white);
+  box-shadow: 1px 1px 5px 0px var(--bs-box-shadow);
 -webkit-box-shadow: 1px 1px 5px 0px rgba(40,47,209,0.45);
 -moz-box-shadow: 1px 1px 5px 0px rgba(40,47,209,0.66);
 }
 
 /* Style the header links */
-.header a {
+.nav a {
   float: left;
-  color: black;
+  color: var(--bs-black);
   text-align: center;
   padding: 12px;
   margin-right: 10px;
@@ -26,86 +36,194 @@ body{
   font-weight: 500;
   line-height: 25px;
   border-radius: 4px;
+  
 }
 
  /*Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
  
 /*reduire la taille de l'image et positionner en full left*/
-.header a.logo{
+.nav a.logo{
     font-size: 14px;
     font-weight: 500;
     height: 100%;
     padding: 0;
+    margin-right: 40px;
     display: flex;
     align-items: center;
     text-align: left;
 }
 
 
-.header img{
+.nav img{
     height: 100px;
     margin-right: 10px;
 }
 
-.header p{
+.nav p{
     display: flex;
     flex-direction: column;
     padding-left: 10px;
-    border-left: 8px solid dodgerblue;
+    border-left: 8px solid var(--bs-dodgerblue)
 }
 
-.header .titre{
-    font-size: 23px;
-    color: dodgerblue;
+.nav .titre{
+    font-family:"Caricatura", var(--bs-font-sans-serif);
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--bs-dodgerblue);
 }
 
-.header .header-right a{
+.nav .nav-right a{
   text-transform: uppercase;
+  border: 1px solid var(--bs-border-color);
+  transition: 0.3s ease-out;
 }
 
 /* Change the background color on mouse-over */
-.header .header-right a:hover {
-  background-color: #ddd;
-  color: black;
+.nav .nav-right a:hover {
+  background-color: var(--bs-border-color);
+  color: var(--bs-black);
 }
-
 
 
 /* Style du lien active ou en cours*/
-.header a.active {
-  background-color: dodgerblue;
-  color: white;
+.nav a.active {
+  background-color: var(--bs-dodgerblue);
+  color: var(--bs-white);
+}
+
+.nav-gauche{
+  display: block;
+  align-items: center;
 }
 
 
-
 /* Floater les liens de la section à droite */
-.header-right {
+.nav-right {
     padding: 20px 10px;
     align-items: center;
     text-align: center;
     float: right;
 }
 
-/* Ajout du media queries pour rendre le menu responsive - lorsque l'écran est de 500px de large ou moins, empilez les liens les uns sur les autres */
-@media all and (max-width: 600px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .header-right {
-    float: none;
-  }
+
+/* bouton menu responsive */
+
+.nav .check-btn{
+  font-size: 25px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 10px;
+  background-color: var(--bs-dodgerblue);
+  color: var(--bs-white);
+  border: 2px solid var(--bs-border-color);
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
 }
 
-@media all and (max-width: 360px) {
-  .header a {
+
+/*  le header */
+
+.header{
+  width: 100%;
+  background-color: var(--bs-dodgerblue);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-block: 100px 50px;
+}
+
+.header img{
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-radius: 100%;
+}
+
+.header .h1{
+  font-size: 60px;
+  font-family: "Caricatura", var(--bs-font-sans-serif);
+  text-transform: uppercase;
+  color: var(--bs-white);
+  margin-bottom: 0;
+}
+
+.header p{
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--bs-white);
+  margin: 0;
+}
+.header hr{
+  height: 5px;
+  width: 120px;
+  background-color: var(--bs-white);
+  border-radius: 15px;
+  border: none;
+}
+
+/* Ajout du media queries pour rendre le menu responsive - lorsque l'écran est de 500px de large ou moins, empilez les liens les uns sur les autres */
+@media all and (max-width: 880px) {
+
+  /* responsive menu */
+  .nav a {
     float: none;
     display: block;
     text-align: left;
   }
-  .header-right {
+  .nav-right {
+    float: none;
+    position: fixed;
+    width: 98%;
+    left: -150%;
+    background-color: #2c3e50;
+    transition: all 0.5s;
+  }
+
+  .nav .nav-right a{
+    color: white;
+  }
+
+  .nav .nav-right a:hover {
+    background-color: var(--bs-border-color);
+    color: var(--bs-white);
+  }
+
+  .nav-gauche{
+    width: 100%;
+  }
+
+ .nav .check-btn{
+    display: block;
+    float: right;
+  }
+
+  #menu:checked ~ .nav-right{
+    left: 0;
+  }
+
+  /* header responsive */
+  .header h1{
+    font-size: 40px;
+  }
+  
+  
+}
+
+/* @media all and (max-width: 600px) {
+  .nav a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .nav-right {
     float: none;
   }
-}
+} */
