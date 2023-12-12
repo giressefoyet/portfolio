@@ -170,25 +170,31 @@ z-index: 1001;
   border: none;
 }
 .header .btn-1{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
   margin: 30px 0;
 }
 
 .header .btn-1 a{
-  color: var(--bs-dodgerblue);
-  background-color: var(--bs-white);
+  color: var(--bs-white);
   text-align: center;
-  padding: 12px;
+  padding: 15px;
+  border: 1px solid var(--bs-white);
   margin-right: 10px;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 550;
   border-radius: 4px;
   transition: all 0.5s ease-out;
 }
 .header .btn-1 a:hover{
-  color: var(--bs-white);
-  background-color: var(--bs-border-color);
+  color: var(--bs-black);
+  background-color: var(--bs-white);
 }
 
 .header .reseau-sociaux{
@@ -197,6 +203,8 @@ z-index: 1001;
   right: 0;
   display: flex;
   flex-direction: column;
+  box-shadow:1px 2px 2px 0px #2c3e508c;
+  border-radius: 0 0 0 10px;
   padding-right: 5px;
   z-index: 999;
 }
@@ -239,7 +247,7 @@ z-index: 1001;
 
 .footer{
   width: 100%;
-  background-color: var(--bs-border-color);
+  background-color: var(--bs-white);
   padding:50px 0 0 0;
   justify-content: center;
   align-items: center;
@@ -275,11 +283,11 @@ z-index: 1001;
   text-transform: uppercase;
   background-color: var(--bs-white);
   border-radius: 100%;
-  border: 2px solid rgba(0, 0, 0, 0.350);
+  border: 2px solid rgba(30, 143, 255, 0.871);
   padding: 20px;
 }
 .footer .reseau a:hover{
-  background-color: rgba(0, 0, 0, 0.152);
+  background-color: rgba(30, 143, 255, 0.271);
 }
 .footer p.copy{
   background-color: var(--bs-dodgerblue);
@@ -296,7 +304,8 @@ z-index: 1001;
   padding: 30px 0;
 }
 
-#galerie-2 h1{
+/* #galerie-2 */
+#galerie-2 h1{ 
   text-align: center;
   font-size: 60px;
   text-transform: uppercase;
@@ -381,7 +390,57 @@ z-index: 1001;
 
 /* fin galerie */
 
+/*  mes competences */
 
+#bloc-competence{
+  position: relative;
+  background-color: var(--bs-dodgerblue);
+  padding-bottom: 80px;
+  padding-top: 20px;
+}
+#bloc-competence h1{
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 50px 0;
+  color:var(--bs-white);
+}
+#bloc-competence .bloc-cp{
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 40px;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 5px;
+  gap: 20px;
+}
+
+#bloc-competence .bloc-cp a{
+  text-decoration: none;
+  color: var(--bs-black);
+  padding: 15px;
+  font-weight: 550;
+  background-color:  rgba(0, 0, 255, 0.2);
+}
+
+/* parties mes services */
+
+#messervices{
+  position: relative;
+  min-height: 100vh;
+  background-color: #ddd;
+  padding: 30px 0;
+}
+
+/* #galerie-2 */
+#messervices h1{ 
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 50px 0;
+  color:var(--bs-dodgerblue);
+}
 
 
 /* Ajout du media queries pour rendre le menu responsive - lorsque l'écran est de 500px de large ou moins, empilez les liens les uns sur les autres */
