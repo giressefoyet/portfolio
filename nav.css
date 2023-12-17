@@ -422,10 +422,25 @@ i{
   background-color: rgba(30, 143, 255, 0.202);
   box-shadow: 0 5px 15px rgba(0,0,0,0.158);
 }
-#bloc-competence .soft .comp{
-  padding-block: 15px 40px;
+
+#bloc-competence .soft h3{
+  color: white;
+  text-transform: capitalize;
 }
 
+#bloc-competence .soft .comp{
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 15px 40px;
+}
+#bloc-competence .soft .comp a{
+  text-transform: capitalize;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.68);
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 /* parties mes services */
 
 #messervices{
