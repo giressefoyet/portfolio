@@ -28,10 +28,11 @@
                     <span>Graphiste & Dev Front-end</span>
                 </p> 
             </a>
-            <input type="checkbox" name="check" id="check">
-            <label for="check" class="check-btn"><i class="fa-solid fa-bars"></i></label>
           </div>
-          <div class="nav-right">
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+          <div class="nav-right" id="nav-right">
             <a href="#a-propos" class="active">A Propos</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#mescompetences">Mes Competences</a>
@@ -39,7 +40,16 @@
             <a href="#contact">Contact</a>
          </div>
      </div>
-
+     <script>
+        function myFunction() {
+            var x = document.getElementById("nav-right");
+            if (x.className === "nav-right") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-right";
+            }
+        } 
+    </script>
     <!-- le header -->
 
     <div class="header">
@@ -228,5 +238,7 @@
         </div>
         <p class="copy">Copyright &copy; Giresse Foyet | Portfolio 2023</p>
     </div>
+
+    
 </body>
 </html>
