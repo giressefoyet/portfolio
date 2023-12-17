@@ -114,7 +114,7 @@ z-index: 1001;
   font-size: 25px;
   position: absolute;
   top: 20px;
-  right: 30px;
+  right: 20px;
   padding: 10px;
   background-color: var(--bs-dodgerblue);
   color: var(--bs-white);
@@ -131,6 +131,7 @@ z-index: 1001;
 
 i{
   font-size: 30px;
+  color: var(--bs-dodgerblue);
 }
 /*  le header */
 
@@ -213,35 +214,26 @@ i{
   z-index: 999;
 }
 
-.header .reseau-sociaux a{
+.header .reseau-sociaux a i{
   width: 100%;
   text-transform: uppercase;
   text-align: left;
   text-decoration: none;
-  color: var(--bs-dodgerblue);
+  background-color: var(--bs-white);
+  border: 1px solid var(--bs-border-color);
   padding: 20px;
   transition: all 0.3s ease-out;
 }
 
-.header .reseau-sociaux a:hover{
+.header .reseau-sociaux a i:hover{
   background-color: var(--bs-dodgerblue);
   color: var(--bs-white);
 }
-/* les background des réseaux sociaux */
-.facebook,
-.instagram,
-.linkedln,
-.x-twitter,
-.github,
-.comup{
-  background-color: var(--bs-white);
-  border: 1px solid var(--bs-border-color);
-}
 
-.facebook{
+.facebook,.facebook  i{
   border-radius: 10px 0 0 0;
 }
-.github{
+.github, .github i{
   border-radius: 0 0 0 10px;
 }
 
@@ -387,6 +379,15 @@ i{
   .grid-zoom span{
     top: 120px;
     font-size: 40px;
+  }
+  .header .h1{
+    font-size: 45px;
+  }
+  .header p{
+    font-size: 20px;
+  }
+  i{
+    font-size: 20px;
   }
 }
 
@@ -558,10 +559,7 @@ form{
   background-repeat: none;
   background-size:cover ;
 }
-.contact .photo img{
-  /* width: 100%; */
-  
-}
+
 .top{
   position: fixed;
   bottom:2%;
@@ -569,17 +567,18 @@ form{
   background-color: white;
   border-radius:100%;
   padding:10px 15px;
-  border: 3px solid black;
-  color: black;
+  border: 2px solid rgb(50, 110, 179);
+  color:  rgb(50, 110, 179);
   transition: all 0.5s ease-out;
 }
 
 
-
-
+.top a:hover{
+  background-color: rgba(255, 255, 255, 0.10);
+}
 
 /* Ajout du media queries pour rendre le menu responsive - lorsque l'écran est de 500px de large ou moins, empilez les liens les uns sur les autres */
-@media all and (max-width: 1084px) {
+@media all and (max-width: 900px) {
 
   /* responsive menu */
   .nav a {
@@ -617,6 +616,44 @@ form{
   #menu:checked ~ .nav-right{
     left: 0;
   }
+  /* responsive h1*/
+  #messervices h1, #contact h1,#bloc-competence h1,
+  #galerie-2 h1{
+    font-size: 30px;
+  }
+
+  /* responsive formulaire*/
+  .formulaire{
+    width: 100%;
+  }
+  .form-bloc input,
+  .form-bloc select,
+  .form-bloc label, 
+  .form-bloc textarea,
+  #envoyer
+  {
+    font-size: 17px;
+  }
+  .contact .photo{
+    display: none;
+  }
+
+  /* mes compétences */
+  #bloc-competence{
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #bloc-competence .bloc-cp{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #bloc-competence .soft{
+    width: 90%;
+  }
 
   /* header responsive */
   .header h1{
@@ -631,6 +668,10 @@ form{
   .footer .localisation, .footer .reseau, .footer .apropos{
     width: 80%;
     margin-bottom: 50px;
+  }
+
+  .top{
+    padding:5px 10px;
   }
 }
 
