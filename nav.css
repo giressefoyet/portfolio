@@ -560,20 +560,21 @@ form{
   background-size:cover ;
 }
 
-.top{
+
+#scrollUp{
   position: fixed;
-  bottom:2%;
-  right: 2%;
+  bottom : 10px;
+  right: -100px;
   background-color: white;
-  border-radius:100%;
+  border-radius:10px;
   padding:10px 15px;
   border: 2px solid rgb(50, 110, 179);
   color:  rgb(50, 110, 179);
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.8;
 }
 
-
-.top a:hover{
+#scrollUp a:hover{
   background-color: rgba(255, 255, 255, 0.10);
 }
 
