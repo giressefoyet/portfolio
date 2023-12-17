@@ -419,6 +419,7 @@ i{
   width: 40%;
   display: block;
   padding: 15px;
+  border: 1px solid var(--bs-border-color);
   background-color: rgba(30, 143, 255, 0.202);
   box-shadow: 0 5px 15px rgba(0,0,0,0.158);
 }
