@@ -459,7 +459,11 @@ i{
   color:var(--bs-dodgerblue);
 }
 
+/*  formulaire de contact */
 
+.contact{
+  display: flex;
+}
 
 .formulaire{
   width:50%;
@@ -498,7 +502,6 @@ form{
   background-color: rgba(158,158,158,0.356);
   padding: 50px 40px;
   border-radius:0 0 10PX 10PX;
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.145);
 }
 .formulaire form .form-bloc{
   display: flex;
@@ -548,13 +551,24 @@ form{
   background-color: white;
   color: black;
 }
+
+.contact .photo{
+  width: 50%;
+  background-image: url(images/IMG_5439.JPG);
+  background-repeat: none;
+  background-size:cover ;
+}
+.contact .photo img{
+  /* width: 100%; */
+  
+}
 .top{
   position: fixed;
   bottom:2%;
   right: 2%;
   background-color: white;
   border-radius:100%;
-  padding:20px 25px;
+  padding:10px 15px;
   border: 3px solid black;
   color: black;
   transition: all 0.5s ease-out;
