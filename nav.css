@@ -460,6 +460,110 @@ i{
 }
 
 
+
+.formulaire{
+  width:50%;
+  /*background-color: white;*/
+  border-radius:10px;
+}
+.formulaire .infos{
+  background-color: white;
+  padding-block: 50px;
+}
+#contact h1{ 
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 30px 0;
+  color:var(--bs-dodgerblue);
+}
+
+
+.formulaire hr{
+  height: 5px;
+  width: 100px;
+  background-color:var(--bs-dodgerblue);
+  margin:0 auto;
+  margin-bottom: 20px;
+  border-radius:20px;
+}
+
+.formulaire .infos p{
+  text-align: center;
+  margin-inline: 20px;
+}
+
+
+form{
+  background-color: rgba(158,158,158,0.356);
+  padding: 50px 40px;
+  border-radius:0 0 10PX 10PX;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.145);
+}
+.formulaire form .form-bloc{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form-bloc label{
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 550;
+}
+
+.form-bloc span{
+  color:red;
+}
+
+.form-bloc input,
+.form-bloc select{
+  padding: 10px;
+  outline: none;
+  font-size: 20px;
+}
+.form-bloc input{
+  border: none;
+}
+
+.form-bloc textarea{
+  padding: 15px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+}
+
+#envoyer{
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 550;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: all 0.5s ease-out;
+}
+
+#envoyer:hover{
+  background-color: white;
+  color: black;
+}
+.top{
+  position: fixed;
+  bottom:2%;
+  right: 2%;
+  background-color: white;
+  border-radius:100%;
+  padding:20px 25px;
+  border: 3px solid black;
+  color: black;
+  transition: all 0.5s ease-out;
+}
+
+
+
+
+
 /* Ajout du media queries pour rendre le menu responsive - lorsque l'écran est de 500px de large ou moins, empilez les liens les uns sur les autres */
 @media all and (max-width: 1084px) {
 
