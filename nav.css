@@ -130,7 +130,7 @@ z-index: 1001;
 }
 
 i{
-  font-size: 17px;
+  font-size: 30px;
 }
 /*  le header */
 
@@ -215,7 +215,6 @@ i{
   width: 100%;
   text-transform: uppercase;
   text-align: left;
-  font-weight: 550;
   text-decoration: none;
   color: var(--bs-dodgerblue);
   padding: 20px;
@@ -240,7 +239,7 @@ i{
 .facebook{
   border-radius: 10px 0 0 0;
 }
-.comup{
+.github{
   border-radius: 0 0 0 10px;
 }
 
@@ -283,12 +282,12 @@ i{
   text-decoration: none;
   text-transform: uppercase;
   background-color: var(--bs-white);
-  border-radius: 100%;
-  border: 2px solid rgba(30, 143, 255, 0.871);
-  padding: 20px;
+  /* border-radius: 100%;
+  border: 2px solid rgba(30, 143, 255, 0.871); */
+  padding: 10px;
 }
-.footer .reseau a:hover{
-  background-color: rgba(30, 143, 255, 0.271);
+.footer .reseau a i:hover{
+  color: rgba(30, 143, 255, 0.9);
 }
 .footer p.copy{
   background-color: var(--bs-dodgerblue);
