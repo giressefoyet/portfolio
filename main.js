@@ -31,7 +31,7 @@ jQuery(function(){
     }
     $('html, body').animate({
         scrollTop:$(val_id).offset().top
-    }, 'slow');
+    }, 7500);
     return false;
 });
 
@@ -39,6 +39,6 @@ jQuery(function(){
 //   ici nous allons rendre les liens de notre nav active lorqu on click
 //   sur le lien
 $('.nav-right a').click(function() {
-$('.nav-right a').removeClass('active');
-$(this).addClass('active')
+    $('.nav-right a').removeClass('active');
+    $(this).addClass('active')
 });
