@@ -129,7 +129,9 @@ z-index: 1001;
   display: none;
 }
 
-
+i{
+  font-size: 17px;
+}
 /*  le header */
 
 .header{
@@ -211,7 +213,6 @@ z-index: 1001;
 
 .header .reseau-sociaux a{
   width: 100%;
-  font-size: 14px;
   text-transform: uppercase;
   text-align: left;
   font-weight: 550;
