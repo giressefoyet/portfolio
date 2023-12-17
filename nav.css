@@ -82,8 +82,8 @@ z-index: 1001;
 
 /* Change the background color on mouse-over */
 .nav .nav-right a:hover{
-  background-color: var(--bs-border-color);
-  color: var(--bs-black);
+  background-color: var(--bs-dodgerblue);
+  color: var(--bs-white);
 }
 
 
