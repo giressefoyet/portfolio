@@ -399,6 +399,8 @@ i{
   background-color: var(--bs-dodgerblue);
   padding-bottom: 80px;
   padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 #bloc-competence h1{
   text-align: center;
@@ -407,23 +409,21 @@ i{
   margin: 50px 0;
   color:var(--bs-white);
 }
+
 #bloc-competence .bloc-cp{
-  width: 70%;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 40px;
-  justify-content: center;
-  margin: 0 auto;
-  border-radius: 5px;
-  gap: 20px;
+  gap: 30px;
 }
 
-#bloc-competence .bloc-cp a{
-  text-decoration: none;
-  color: var(--bs-black);
+#bloc-competence .soft{
+  width: 40%;
+  display: block;
   padding: 15px;
-  font-weight: 550;
-  background-color:  rgba(0, 0, 255, 0.2);
+  background-color: rgba(30, 143, 255, 0.202);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.158);
+}
+#bloc-competence .soft .comp{
+  padding-block: 15px 40px;
 }
 
 /* parties mes services */
