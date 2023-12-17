@@ -257,18 +257,17 @@
     //    ralentir le défilement des liens sur la page en prennant 
     //    tous les liens qui commence par #, on stoke la valeur du href dans 
     //    une variable appeller 
-    
+
          $('a[href^="#"]').click(function(){
             var val_id = $(this).attr("href");
             if (val_id === '#') {
                 return;
             }
             $('html, body').animate({
-                scrollTop:$(the_id).offset().top
+                scrollTop:$(val_id).offset().top
             }, 'slow');
             return false;
         });
- 
     </script>
 </body>
 </html>
