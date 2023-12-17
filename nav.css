@@ -1,6 +1,6 @@
 /* Style the header with a grey background and some padding */
 :root{
-  --bs-dodgerblue:dodgerblue;
+  --bs-dodgerblue:#1e90ff;
   --bs-white:rgba(255, 255, 255, 0.863);
   --bs-black:black;
   --bs-box-shadow: rgba(40,47,209,0.45);
@@ -136,7 +136,9 @@ i{
 
 .header{
   width: 100%;
-  background-color: var(--bs-dodgerblue);
+  /* background-color: var(--bs-dodgerblue); */
+  background: rgb(0,37,226);
+  background: linear-gradient(30deg, rgba(0,37,226,0.8029411593739058) 0%, rgba(30,144,255,1) 100%);
   justify-content: center;
   align-items: center;
   text-align: center;
