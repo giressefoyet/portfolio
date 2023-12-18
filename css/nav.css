@@ -1,0 +1,666 @@
+/* Style the header with a grey background and some padding */
+:root{
+  --bs-dodgerblue:#1e90ff;
+  --bs-white:rgba(255, 255, 255, 0.863);
+  --bs-black:black;
+  --bs-box-shadow: rgba(40,47,209,0.45);
+  --bs-border-color:rgba(0, 0, 0, 0.2);
+  --bs-success-rgb: 25, 135, 84;
+  --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--bs-font-sans-serif);
+}
+.nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--bs-white);
+  box-shadow: 1px 1px 5px 0px var(--bs-box-shadow);
+-webkit-box-shadow: 1px 1px 5px 0px rgba(40,47,209,0.45);
+-moz-box-shadow: 1px 1px 5px 0px rgba(40,47,209,0.66);
+z-index: 1001;
+}
+
+/* Style the header links */
+.nav a{
+  float: left;
+  color: var(--bs-black);
+  text-align: center;
+  padding: 12px;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+ /*Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+ 
+/*reduire la taille de l'image et positionner en full left*/
+.nav a.logo{
+    font-size: 14px;
+    font-weight: 500;
+    height: 100%;
+    padding: 0;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+
+.nav img{
+    height: 100px;
+    margin-right: 10px;
+}
+
+.nav p{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    border-left: 8px solid var(--bs-dodgerblue)
+}
+
+.nav .titre{
+    font-family:"Caricatura", var(--bs-font-sans-serif);
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--bs-dodgerblue);
+}
+
+.nav .nav-right a{
+  text-transform: uppercase;
+  border: 1px solid var(--bs-border-color);
+  transition: all 0.3s ease-out;
+}
+
+/* Change the background color on mouse-over */
+.nav .nav-right a:hover{
+  background-color: var(--bs-dodgerblue);
+  color: var(--bs-white);
+}
+
+
+/* Style du lien active ou en cours*/
+.nav-right a.active {
+  background-color: var(--bs-dodgerblue);
+  color: var(--bs-white);
+}
+
+.nav-gauche{
+  display: block;
+  align-items: center;
+}
+
+
+/* Floater les liens de la section à droite */
+.nav-right {
+    padding: 20px 10px;
+    align-items: center;
+    text-align: center;
+    float: right;
+}
+i{
+  font-size: 30px;
+  color: var(--bs-dodgerblue);
+}
+
+/* bouton menu responsive */
+
+.nav .icon{
+  font-size: 25px;
+  position: absolute;
+  top: 20px;
+  right: 8px;
+  padding: 10px;
+  background-color: var(--bs-dodgerblue);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+.nav .icon i{
+  color: var(--bs-white);
+  font-size: 30px;
+}
+
+/*  le header */
+
+.header{
+  width: 100%;
+  /* background-color: var(--bs-dodgerblue); */
+  background: rgb(0,37,226);
+  background: linear-gradient(30deg, rgba(0,37,226,0.8029411593739058) 0%, rgba(30,144,255,1) 100%);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-block: 100px 50px;
+}
+
+.header img{
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border-radius: 100%;
+}
+
+.header .h1{
+  font-size: 60px;
+  font-family: "Caricatura", var(--bs-font-sans-serif);
+  text-transform: uppercase;
+  color: var(--bs-white);
+  margin-bottom: 0;
+}
+
+.header p{
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--bs-white);
+  margin: 0;
+}
+.header hr{
+  height: 5px;
+  width: 120px;
+  background-color: var(--bs-white);
+  border-radius: 15px;
+  border: none;
+}
+.header .btn-1{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.header .btn-1 a{
+  color: var(--bs-white);
+  text-align: center;
+  padding: 15px;
+  border: 1px solid var(--bs-white);
+  margin-right: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 550;
+  border-radius: 4px;
+  transition: all 0.5s ease-out;
+}
+.header .btn-1 a:hover{
+  color: var(--bs-black);
+  background-color: var(--bs-white);
+}
+
+.header .reseau-sociaux{
+  position: fixed;
+  top: 35%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow:1px 2px 2px 0px #2c3e508c;
+  border-radius: 0 0 0 10px;
+  padding-right: 5px;
+  z-index: 999;
+}
+
+.header .reseau-sociaux a i{
+  width: 100%;
+  text-transform: uppercase;
+  text-align: left;
+  text-decoration: none;
+  background-color: var(--bs-white);
+  border: 1px solid var(--bs-border-color);
+  padding: 20px;
+  transition: all 0.3s ease-out;
+}
+
+.header .reseau-sociaux a i:hover{
+  background-color: var(--bs-dodgerblue);
+  color: var(--bs-white);
+}
+
+.facebook,.facebook  i{
+  border-radius: 10px 0 0 0;
+}
+.github, .github i{
+  border-radius: 0 0 0 10px;
+}
+
+/* le footer */
+
+.footer{
+  width: 100%;
+  background-color: var(--bs-white);
+  padding:50px 0 0 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer .foot{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.footer .foot h2{
+  color: var(--bs-dodgerblue);
+  text-transform: uppercase;
+}
+
+.footer .foot p{
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--bs-black);
+  margin-top: 40px;
+}
+
+.footer .reseau .res{
+  margin-top: 50px;
+}
+
+.footer .localisation, .footer .reseau, .footer .apropos{
+  width: 30%;
+}
+.footer .reseau a{
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: var(--bs-white);
+  /* border-radius: 100%;
+  border: 2px solid rgba(30, 143, 255, 0.871); */
+  padding: 10px;
+}
+.footer .reseau a i:hover{
+  color: rgba(30, 143, 255, 0.9);
+}
+.footer p.copy{
+  background-color: var(--bs-dodgerblue);
+  margin: 0;
+  padding: 30px;
+}
+
+/* galerie avec media querrie portfolio*/
+
+#galerie-2{
+  position: relative;
+  min-height: 100vh;
+  background-color: #ddd;
+  padding: 30px 0;
+}
+
+/* #galerie-2 */
+#galerie-2 h1{ 
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 50px 0;
+  color:var(--bs-dodgerblue);
+}
+
+#galerie-2 .grid-2{
+  /* dimension de la grille definir la largeur */
+  max-width: 1300px; /* 1 */
+  width: 80%;
+  height: auto;
+  margin: 30px auto;
+  display: grid; /* 3 */
+  grid-template-columns: repeat(auto-fill, 300px);/* auto-fill créer 
+  automatiquement des case de 300px en fonction de la largeur maximal 
+  et grid-template-columns créer des colonnes définie en foction des dimensions*/
+  justify-content: center;
+  grid-gap: 20px;/*Mettre de l'espace entre les cases*/
+}
+#galerie-2 .grid-2 .grid-bloc1{
+  width:300px; /* 2 */
+  height:200px;
+  border: 5px solid rgba(30, 143, 255, 0.405);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+#galerie-2 .grid-2 .grid-bloc1 img{
+  width:100%; /* 2 */
+  height:100%;
+  object-fit: cover;
+  transition: .2s linear;
+}
+#galerie-2 .grid-2 .grid-bloc1:hover img{
+  transform: scale(1.1);
+}
+
+/* zoom sur image */
+.grid-zoom{
+  position: fixed;
+  top: 0; left: 0;
+  background-color: rgba(0,0,0,0.8);
+  height: 100%;
+  width: 100%;
+  display: none;
+  z-index: 1000;
+  transition: all .8s ease-out;
+}
+
+.grid-zoom span{
+  position: absolute;
+  top: 90px; right: 20px;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+.grid-zoom img{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -38%);
+  width: 750px;
+  object-fit: cover;
+}
+
+.grid-zoom:target{
+  outline: none;
+  display: block;
+}
+@media(max-width:768px){
+  .grid-zoom img{
+      width: 95%;
+  }
+  .grid-zoom span{
+    top: 120px;
+    font-size: 40px;
+  }
+  .header .h1{
+    font-size: 45px;
+  }
+  .header p{
+    font-size: 20px;
+  }
+  i{
+    font-size: 20px;
+  }
+}
+
+/* fin galerie */
+
+/*  mes competences */
+
+#bloc-competence{
+  position: relative;
+  background-color: var(--bs-dodgerblue);
+  padding-bottom: 80px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#bloc-competence h1{
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 50px 0;
+  color:var(--bs-white);
+}
+
+#bloc-competence .bloc-cp{
+  display: flex;
+  gap: 30px;
+}
+
+#bloc-competence .soft{
+  width: 40%;
+  display: block;
+  padding: 15px;
+  border: 1px solid var(--bs-border-color);
+  background-color: rgba(30, 143, 255, 0.202);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.158);
+}
+
+#bloc-competence .soft h3{
+  color: white;
+  text-transform: capitalize;
+}
+
+#bloc-competence .soft .comp{
+  display: flex;
+  flex-wrap: wrap;
+  padding-block: 15px 40px;
+}
+#bloc-competence .soft .comp a{
+  text-transform: capitalize;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.68);
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+/* parties mes services */
+
+#messervices{
+  position: relative;
+  min-height: 100vh;
+  background-color: #ddd;
+  padding: 30px 0;
+}
+
+/* #galerie-2 */
+#messervices h1{ 
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 50px 0;
+  color:var(--bs-dodgerblue);
+}
+
+/*  formulaire de contact */
+
+.contact{
+  display: flex;
+}
+
+.formulaire{
+  width:50%;
+  /*background-color: white;*/
+  border-radius:10px;
+}
+.formulaire .infos{
+  background-color: white;
+  padding-block: 50px;
+}
+#contact h1{ 
+  text-align: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin: 30px 0;
+  color:var(--bs-dodgerblue);
+}
+
+
+.formulaire hr{
+  height: 5px;
+  width: 100px;
+  background-color:var(--bs-dodgerblue);
+  margin:0 auto;
+  margin-bottom: 20px;
+  border-radius:20px;
+  border: none;
+}
+
+.formulaire .infos p{
+  text-align: center;
+  margin-inline: 20px;
+}
+
+
+form{
+  background-color: rgba(158,158,158,0.356);
+  padding: 50px 40px;
+  border-radius:0 0 10PX 10PX;
+}
+.formulaire form .form-bloc{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form-bloc label{
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 550;
+}
+
+.form-bloc span{
+  color:red;
+}
+
+.form-bloc input,
+.form-bloc select{
+  padding: 10px;
+  outline: none;
+  font-size: 20px;
+}
+.form-bloc input{
+  border: none;
+}
+
+.form-bloc textarea{
+  padding: 15px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+}
+
+#envoyer{
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 550;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: all 0.5s ease-out;
+}
+
+#envoyer:hover{
+  background-color: white;
+  color: black;
+}
+
+.contact .photo{
+  width: 50%;
+  background-image: url(images/IMG_5439.JPG);
+  background-repeat: none;
+  background-size:cover ;
+}
+
+
+#scrollUp{
+  position: fixed;
+  bottom : 10px;
+  right: -100px;
+  background-color: white;
+  border-radius:10px;
+  padding:10px 15px;
+  border: 2px solid rgb(50, 110, 179);
+  color:  rgb(50, 110, 179);
+  transition: all 0.5s ease-in-out;
+  opacity: 0.8;
+}
+
+#scrollUp a:hover{
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+/* Ajout du media queries pour rendre le menu responsive - lorsque l'écran est de 500px de large ou moins, empilez les liens les uns sur les autres */
+@media all and (max-width: 900px) {
+
+  /* ------- responsive menu -------- */
+  .nav-right{
+    display: none;
+    padding: 0;
+  }
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+  .nav-right.responsive {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-right a{
+    text-align: left;
+    padding-left: 45px;
+    width: 100%;
+  }
+/*  -------------------- -------- */
+  .nav-gauche{
+    width: 100%;
+  }
+  /* responsive h1*/
+  #messervices h1, #contact h1,#bloc-competence h1,
+  #galerie-2 h1{
+    font-size: 30px;
+  }
+
+  /* responsive formulaire*/
+  .formulaire{
+    width: 100%;
+  }
+  .form-bloc input,
+  .form-bloc select,
+  .form-bloc label, 
+  .form-bloc textarea,
+  #envoyer
+  {
+    font-size: 17px;
+  }
+  .contact .photo{
+    display: none;
+  }
+
+  /* mes compétences */
+  #bloc-competence{
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #bloc-competence .bloc-cp{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #bloc-competence .soft{
+    width: 90%;
+  }
+
+  /* header responsive */
+  .header h1{
+    font-size: 40px;
+  }
+  
+  /* le footer */
+  .footer .foot{
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer .localisation, .footer .reseau, .footer .apropos{
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .top{
+    padding:5px 10px;
+  }
+}
